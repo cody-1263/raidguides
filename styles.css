@@ -10,11 +10,23 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* --------------- */
@@ -26,18 +38,40 @@ h2 {
   cursor: default;
 }
 
+/* --------------- */
+
+.page-description {
+  color: #aaa;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------- */
+
 .part-header {
   display: grid;
-  grid-template-rows: 3rem minmax(min-content, max-content);
+  grid-template-rows: 0rem 2rem minmax(min-content, max-content) minmax(min-content, max-content);
   row-gap: 0.2rem;
   grid-template-areas: 
+  "image"
   "caption"
-  "pills";
+  "pills"
+  "description";
   margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.part-header-image {
+  grid-area: image;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .part-header-caption {
   grid-area: caption;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .part-header-pills {
@@ -57,6 +91,14 @@ h2 {
   padding-top: 0.1rem;
   background-color: #196dcb;
   color: #fff;
+}
+
+.part-header-description {
+  grid-area: description;
+  margin-top: 0.2rem;
+  color: #aaa;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 /* --------------- */
@@ -127,7 +169,7 @@ h2 {
   grid-area: description;
   margin-top: 0.1rem;
   margin-bottom: auto;
-  color: #888;
+  color: #aaa;
   font-style: italic;
   font-size: 0.9rem;
 }
@@ -138,7 +180,10 @@ h2 {
 .bg-orange { background-color: #cc5918; }
 .bg-blue { background-color: #196dcb; }
 .bg-green { background-color: #33911d; }
+.bg-gray { background-color: #444444; }
 
+.text-green { color: #5ce05e; }
+.text-violet { color: #de5ce0; }
 
 /* --------------- */
 
@@ -160,10 +205,23 @@ h2 {
     height: auto;
     margin-bottom: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 4rem;
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 5rem;
     grid-template-areas: 
     "caption caption caption"
     "description description description"
     "icon1 icon2 icon3";
+  }
+  
+  .gearitem-icon1 {
+    width: 4rem;
+    height: 4rem;
+  }
+  .gearitem-icon2 {
+    width: 4rem;
+    height: 4rem;
+  }
+  .gearitem-icon3 {
+    width: 4rem;
+    height: 4rem;
   }
 }
