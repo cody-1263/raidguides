@@ -1,0 +1,107 @@
+html {
+  background: #232323;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12pt;
+  color: #eee;
+}
+
+body {
+  /*background: #333333;*/
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------- */
+
+.mainpage {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: default;
+}
+
+.part-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.part-header-pill {
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+  background-color: #196dcb;
+  color: #fff;
+}
+
+/* --------------- */
+
+.gearitem-grid {
+  display: grid;
+  height: 64px;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "icon caption"
+  "icon description";
+}
+
+.gearitem-icon {
+  grid-area: icon;
+  margin: auto;
+  width: 48px;
+  height: 48px;
+}
+
+.gearitem-captionflex {
+  grid-area: caption;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gearitem-caption {
+  margin-top: auto;
+  margin-bottom: 0.1rem;
+  font-weight: 700;
+}
+
+.gearitem-pill {
+  border-radius: 0.4rem;
+  margin-top: auto;
+  margin-bottom: 0.1rem;
+  font-size: 0.8rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+  background-color: #196dcb;
+  color: #fff;
+}
+
+
+.gearitem-description {
+  grid-area: description;
+  margin-top: 0.1rem;
+  margin-bottom: auto;
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* --------------- */
+
+.bg-red { background-color: #cc1818; }
+.bg-orange { background-color: #cc5918; }
+.bg-blue { background-color: #196dcb; }
+.bg-green { background-color: #33911d; }
+
+
